@@ -3,7 +3,7 @@
 <suite name="Suite" preserve-order="true">
 	<test name="AppBuilder_Test" preserve-order="true">
 		<classes>
-			<class name="com.qait.quia2.Smoke.tests.AppBuilder_Test">
+			<class name="com.qait.AKC.Smoke.tests.AppBuilder_Test">
 			</class>
 
 		</classes>

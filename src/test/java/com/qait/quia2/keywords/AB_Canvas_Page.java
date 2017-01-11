@@ -5,6 +5,7 @@ import com.qait.quia2.automation.getpageobjects.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  *
@@ -34,7 +35,7 @@ public class AB_Canvas_Page extends GetPage {
         element("action_button").click();
         wait.waitForElementToBeVisible(element("edit_Platform"));
         element("edit_Platform").click();
-        wait.waitForElementToDisappear(element("load_spinner"));
+        //wait.waitForElementToDisappear(element("load_spinner"));
         removing_alert();
     }
 
@@ -56,19 +57,36 @@ public class AB_Canvas_Page extends GetPage {
     }
 
     public void removing_alert() {
-        if (isElementDisplayed("alert")) {
+        try {
+            if (driver.findElement(By.xpath("//button[text()='End tour']")).isDisplayed());
             element("end_tour").click();
+
+        } catch (Exception e) {
+            System.out.println("");
         }
     }
 
     public void selecting_Label(String value) {
-        scroll_Up();
-        element("label", value).click();
-    }
-
-    public void scroll_Up() {
         WebElement element = driver.findElement(By.xpath("//h3[@class='closed']"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
+        element("label", value).click();
+    }
+
+    public void click_Cancel() {
+        element("cancel_btn").click();
+        wait.waitForElementToDisappear(element("load_spinner"));
+    }
+
+    public void select_environment() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", element("environment"));
+        Select select = new Select(element("environment"));
+        select.selectByIndex(4);
+        wait.waitForElementToDisappear(element("load_spinner"));
+    }
+    
+    public void print(String value) {
+        logMessage(value);
     }
 }
