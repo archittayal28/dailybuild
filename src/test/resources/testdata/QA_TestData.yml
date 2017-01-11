@@ -1,0 +1,12 @@
+ProjectName: AppBuilder
+IBURL: https://itembuilder-qa.cengage.info
+ABURL: http://appbuilder.cengage.info/#/login
+users:
+    username: atayal
+    password: Cengage100
+  
+email:
+    send: yes
+    recepients: 
+     recepient1: archittayal@qainfotech.net
+    
