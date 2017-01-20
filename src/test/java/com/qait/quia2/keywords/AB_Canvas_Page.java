@@ -83,7 +83,7 @@ public class AB_Canvas_Page extends GetPage {
         js.executeScript("arguments[0].scrollIntoView();", element("environment"));
         Select select = new Select(element("environment"));
         select.selectByIndex(4);
-        wait.waitForElementToDisappear(element("load_spinner"));
+        //wait.waitForElementToDisappear(element("load_spinner"));
     }
     
     public void print(String value) {
