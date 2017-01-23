@@ -80,10 +80,10 @@ public class AB_Canvas_Page extends GetPage {
 
     public void select_environment() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", element("environment"));
-        Select select = new Select(element("environment"));
-        select.selectByIndex(4);
-        //wait.waitForElementToDisappear(element("load_spinner"));
+        js.executeScript("window.scrollTo(0,0)");
+        Select select = new Select(element("environment_select"));
+        select.selectByIndex(0);
+        wait.waitForElementToDisappear(element("load_spinner"));
     }
     
     public void print(String value) {

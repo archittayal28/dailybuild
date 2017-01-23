@@ -15,7 +15,8 @@ select_artifact         xpath               //span[text()='${value}']
 current_build           css                 .form-group.artifact-versions.col-sm-9>span
 label                   xpath               //label[text()='${value}']/..//span[text()='Artifact']
 cancel_btn              xpath               //label[text()='Cancel']
-environment             xpath               //select[@ng-model='selectedEnvironment']
+environment             xpath               //label[text()='Environments:']
+environment_select      xpath               //select[@ng-model='selectedEnvironment']
 ====================================================================================
 
 @all
