@@ -82,7 +82,7 @@ public class AB_Canvas_Page extends GetPage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0,0)");
         Select select = new Select(element("environment_select"));
-        select.selectByIndex(0);
+        select.selectByVisibleText("STAGE-001 - stage");
         wait.waitForElementToDisappear(element("load_spinner"));
     }
     
