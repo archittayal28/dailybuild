@@ -22,17 +22,7 @@ public class AppBuilder_Test {
     }
 
     @Test
-    public void Test01_Navigating_to_AKC_Build() {
-        test.abcanvas.clicking_platform("MindTap");
-        test.abcanvas.clicking_artifact("ActivityBuilder");
-        test.abcanvas.clicking_Edit_Platform();
-        test.abcanvas.clicking_Foundation_Setting();
-        test.abcanvas.clicking_Artifact("assessment-builder");
-        test.abcanvas.fetching_current_build();
-    }
-
-    @Test
-    public void Test02_Navigating_to_DevMath_Build() {
+    public void Test01_Navigating_to_DevMath_Build() {
         test.abcanvas.clicking_platform("DevStudies");
         test.abcanvas.clicking_artifact("DevStud-Math");
         test.abcanvas.clicking_Edit_Platform();

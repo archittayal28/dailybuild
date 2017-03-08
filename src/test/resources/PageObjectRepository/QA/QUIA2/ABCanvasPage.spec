@@ -5,7 +5,7 @@ Page Title: Central Authentication Service
 load_spinner            xpath               //div[@class='spinner']
 alert                   xpath               //div[@id='step-0']
 end_tour                xpath               //button[text()='End tour']
-platform                xpath               //h4[contains(text(),'${value}')]
+platform                xpath               //span[contains(text(),'${value}')]
 show_environment        xpath               //a[text()='${value}']
 action_button           xpath               //button[@id='dropdownMenu1']
 edit_Platform           xpath               //a[text()='Edit Platform']
